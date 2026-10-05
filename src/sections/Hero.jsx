@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { ArrowRight, Download, Mail, ArrowDown, Sparkles, Award, Code, User, Play, Clock } from 'lucide-react';
+import { ArrowRight, FileText, Mail, ArrowDown, Sparkles, Award, Code, User, Play, Clock } from 'lucide-react';
 import { Github, Linkedin, Instagram } from '../components/SocialIcons';
 import { profile } from '../config/profile';
 import TiltCard from '../components/TiltCard';
 import Magnetic from '../components/Magnetic';
+import ResumeModal from '../components/ResumeModal';
 
 const TITLES = profile.titles;
 
@@ -15,6 +16,7 @@ export default function Hero() {
   const [activeTab, setActiveTab] = useState('profile'); // 'profile' | 'code'
   const [runOutput, setRunOutput] = useState(null);
   const [localTime, setLocalTime] = useState('');
+  const [showResume, setShowResume] = useState(false);
 
   // Live Bengaluru IST Clock
   useEffect(() => {
@@ -71,6 +73,7 @@ export default function Hero() {
   ];
 
   return (
+    <>
     <section
       id="home"
       className="bg-grid"
@@ -211,13 +214,12 @@ export default function Hero() {
               <a href="#projects" className="btn btn-primary">
                 Explore Projects <ArrowRight size={16} />
               </a>
-              <a
-                href={profile.resumePath}
-                download
+              <button
+                onClick={() => setShowResume(true)}
                 className="btn btn-outline"
               >
-                <Download size={15} /> Resume CV
-              </a>
+                <FileText size={15} /> View Resume
+              </button>
             </div>
 
             {/* Social Icons Row */}
@@ -593,5 +595,7 @@ export default function Hero() {
         </div>
       </div>
     </section>
+    {showResume && <ResumeModal onClose={() => setShowResume(false)} />}
+    </>
   );
 }
