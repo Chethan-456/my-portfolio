@@ -94,4 +94,23 @@ export const projects = [
     ],
     status: 'private',
   },
+  {
+    id: 'student-developer-club',
+    title: 'Student Developer Club',
+    subtitle: 'Web Development',
+    type: 'Community Platform',
+    role: 'Lead Developer',
+    featured: false,
+    color: '#84cc16', // matching the yellow-green icon in the image
+    description: 'A student developer community platform built to connect student developers, share opportunities, showcase projects and encourage continuous learning in technology.',
+    liveUrl: 'https://studentdevclub.pages.dev/',
+    githubUrl: '#',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Web Development', 'Cloudflare Pages'],
+    highlights: [
+      'Built a centralized platform for a student tech community',
+      'Deployed globally via Cloudflare Pages',
+      'Designed responsive layout to showcase student projects',
+    ],
+    status: 'live',
+  },
 ];

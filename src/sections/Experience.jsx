@@ -31,6 +31,20 @@ const experiences = [
       'Configured custom domains, SSL certificates, SEO optimization, and Vercel cloud hosting',
     ],
   },
+  {
+    role: 'Core Lead',
+    company: 'Chathurya Student Developers Club',
+    period: '2025 — 2026',
+    type: 'Leadership',
+    current: false,
+    color: '#3b82f6',
+    description: 'Led a student developer community, organized technical workshops, and mentored peers.',
+    points: [
+      'Fostered collaboration across student volunteers and organized technical events',
+      'Conducted web development workshops and shared technical knowledge with juniors',
+      'Led team initiatives to build community platforms connecting student developers',
+    ],
+  },
 ];
 
 const education = {
